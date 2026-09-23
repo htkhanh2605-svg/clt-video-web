@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Định lý giới hạn trung tâm</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='/css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="hero">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                LẬP TRÌNH PYTHON NÂNG CAO
+            </p>
+
+            <h1>
+                Định lý giới hạn trung tâm
+            </h1>
+
+            <p>
+                Quan sát phân phối của trung bình mẫu khi n tăng
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="container">
+
+        <!-- VIDEO -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div class="section-label">
+                    Simulation
+                </div>
+
+                <h2 class="section-title">
+                    Video mô phỏng
+                </h2>
+
+            </div>
+
+
+            <div class="video-container">
+
+                <video
+                    controls
+                    playsinline
+                    preload="metadata"
+                    aria-label="Video mô phỏng định lý giới hạn trung tâm"
+                >
+
+                    <source
+                        src="{{ url_for('static', path='/video/clt_animation.mp4') }}"
+                        type="video/mp4"
+                    >
+
+                    Trình duyệt của bạn không hỗ trợ video.
+
+                </video>
+
+            </div>
+
+        </section>
+
+
+        <!-- OBSERVATION -->
+        <section class="section observation">
+
+            <div class="card">
+
+                <h2>
+                    Cách quan sát
+                </h2>
+
+                <ol>
+
+                    <li>
+                        Quan sát kích thước mẫu <strong>n</strong>.
+                    </li>
+
+                    <li>
+                        Quan sát histogram của trung bình mẫu.
+                    </li>
+
+                    <li>
+                        Đánh giá xu hướng tiến về phân phối chuẩn.
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+</body>
+</html>
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.video-container video {
+    width: min(750px, 90%);
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(23, 32, 51, 0.15);
+
+    background: #071d35;
+}
+
+.observation {
+    padding-top: 20px;
+}
+
+.observation .card {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 35px 45px;
+}
+
+.observation h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+
+    line-height: 1.2;
+
+    color: var(--primary);
+}
+
+.observation ol {
+    margin: 0;
+    padding-left: 35px;
+}
+
+.observation li {
+    margin-bottom: 18px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+
+    color: var(--ink);
+}
+
+.observation li::marker {
+    color: var(--primary);
+
+    font-weight: 800;
+}
